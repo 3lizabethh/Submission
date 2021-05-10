@@ -10,10 +10,14 @@ c.	The median order value is $284.
 
 Question 2:
 a)	54
+
 SELECT count (*) FROM [Orders] where ShipperID==1;
+
 b)	Peacock
 SELECT COUNT(Orders.OrderID) AS Counts ,Employees.LastName
+
 FROM Orders
+
 INNER JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
 GROUP BY Employees.EmployeeID
 ORDER BY Counts DESC;
