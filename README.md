@@ -9,11 +9,13 @@ b.	After removing the outliers, the mean can still be skewed by the points that 
 c.	The median order value is $284.
 
 Question 2:
+
 a)	54
 
 SELECT count (*) FROM [Orders] where ShipperID==1;
 
 b)	Peacock
+
 SELECT COUNT(Orders.OrderID) AS Counts ,Employees.LastName
 
 FROM Orders
