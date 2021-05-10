@@ -19,12 +19,21 @@ SELECT COUNT(Orders.OrderID) AS Counts ,Employees.LastName
 FROM Orders
 
 INNER JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
+
 GROUP BY Employees.EmployeeID
+
 ORDER BY Counts DESC;
+
 c)	Gumbär Gummibärchen
+
 SELECT SUM(OrderDetails.Quantity) AS Counts,Products.ProductName
+
 FROM ((Products
+
 INNER JOIN Suppliers ON  Products.SupplierID=Suppliers.SupplierID)
+
 INNER JOIN OrderDetails ON Products.ProductID=OrderDetails.ProductID)
+
 WHERE Suppliers.Country LIKE 'Germany'GROUP BY Products.ProductName
+
 ORDER BY Counts DESC;
